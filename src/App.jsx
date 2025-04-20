@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Saidbar from './components/index';
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
@@ -59,6 +59,7 @@ const data = [
 ]
 
 const App = () => {
+  const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
     const stored = localStorage.getItem("videoItems");
@@ -67,12 +68,13 @@ const App = () => {
     }
   }, []);
 
+
   return (
     <>
       <div className='flex bg-gray-400 h-screen overflow-hidden'>
-        <Saidbar />
+        {isOpen && <Saidbar />}
         <div className='flex flex-col gap-4 w-full overflow-hidden'>
-            <Header />
+            <Header onOpenMenu={() => setIsOpen(!isOpen)}/>
           <div className="ms-3 overflow-y-auto">
 
             <Routes >

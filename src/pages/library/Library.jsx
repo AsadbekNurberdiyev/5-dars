@@ -29,7 +29,7 @@ const Library = () => {
     }
 
     return (
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-4 gap-4 sm:grid-cols-2">
             {items.map((item) => <div key={item.id} className="border-lg rounded-lg bg-white p-3 hover:shadow-lg">
                 <img src={item.image} alt="no upload image" className='w-full rounded-lg' />
                 <div className="flex items-center justify-between">

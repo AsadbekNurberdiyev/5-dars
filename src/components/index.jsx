@@ -1,11 +1,10 @@
 import {Link} from 'react-router-dom'
-import { Menu, Youtube, House, Compass, Layers2, CalendarCheck, BookA, History, TvMinimalPlay, Heart, ChevronsDown } from 'lucide-react';
+import {Youtube, House, Compass, Layers2, CalendarCheck, BookA, History, TvMinimalPlay, Heart, ChevronsDown } from 'lucide-react';
 
 const Saidbar = () => {
     return (
             <div className="flex flex-col  bg-gray-300  px-4 h-screen">
                 <div className=' flex items-center  gap-4 py-4 px-2'>
-                   <button className=' px-2 py-2'><Menu /></button>
                     <div className='items-center flex   hover hover:bg-gray-200 px-2 gap-2'>
                         <button className='text-red-500 '><Youtube /></button>
                         <h1>YouTobe</h1>
